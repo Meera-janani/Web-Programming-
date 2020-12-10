@@ -1,0 +1,240 @@
+<html>
+<head>
+<title>Web Programming</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+.container{
+   position:relative;
+   text-align:center;
+   color:black;
+}
+.centered{
+   position:absolute;
+   top:80%;
+   left:50%;
+   transform:translate(-50%,-50%);
+}
+</style>
+<style>
+.sample{
+ border:4px;
+ padding:34px;
+}
+</style>
+<body>
+<div class="container">
+ <img src="image3.jpg" style="width:100%;">
+ <div class="centered" >
+<b style="font-size:500%">WEB PROGRAMMING</b>
+</div>
+</div>
+<table border="2" style="border-collapse:collapse" align="center"  height="10%" width="100%">
+<tr style="background-color:#778899" width="50%">
+<td  align="center">
+<a href="#CONCEPT">CONCEPT</a>
+</td>
+<td align="center">
+<a href="#CLIENT-SERVER CONCEPT">CLIENT-SERVER CONCEPT</a>
+</td>
+<td align="center">
+<a href="#COMPONENTS OF WEB APPLICATION">COMPONENTS OF WEB APPLICATION</a>
+</td>
+<td align="center">
+<a href="#TYPES OF WEB APPLICATION">TYPES OF WEB APPLICATION</a>
+</td>
+<td align="center">
+<a href="#OVERVIEW OF HTTP REQUEST-RESPONSE">OVERVIEW OF HTTP REQUEST-RESPONSE</a>
+</td>
+<td align="center">
+<a href="#GENERATION OF DYNAMIC WEBPAGE">GENERATION OF DYNAMIC WEBPAGE</a>
+</td>
+<td align="center">
+<a href="#APPLICATION SERVER">APPLICATION SERVER</a>
+</td>
+<td align="center">
+<a href="#WEB SECURITY">WEB SECURITY</a>
+</td>
+</tr>
+</table>
+<a name="CONCEPT"></a>
+<h1 style="font-size:100%">
+CONCEPT
+</h1>
+<p class="sample">
+Web servers and web browsers are communicating client-server computer programs for distributing
+documents and information, generally called web data, over the Internet. Web data are marked up in the
+HTML language for presentation and interaction with people in web browsers. Each web server uses an
+IP address or domain name as well as a port number for its identification. People use web browsers to
+send data requests to web servers with the HTTP protocol, and the web servers running on server
+computers either retrieve the requested data from local disks or generate the data on-the-fly, mark up the
+data in HTML, and send the resulting HTML files back to the web browsers to render. Apache, Tomcat
+and IIS are popular web server programs, and IE and Firefox are popular web browsers. </p>
+<a name="CLIENT-SERVER CONCEPT"></a>
+<h3 style="font-size:100%">CLIENT-SERVER CONCEPT</h3>
+<center>
+<img src="client-server.png" alt="client-server"  width="500" height="333">
+</center>
+<p class="sample">
+The client-server model describes how a server provides resources and services to one or more clients. Examples of servers include web servers, mail servers, and file servers. Each of these servers provide resources to client devices, such as desktop computers, laptops, tablets, and smartphones. Most servers have a one-to-many relationship with clients, meaning a single server can provide resources to multiple clients at one time.
+
+When a client requests a connection to a server, the server can either accept or reject the connection. If the connection is accepted, the server establishes and maintains a connection with the client over a specific protocol. For example, an email client may request an SMTP connection to a mail server in order to send a message. The SMTP application on the mail server will then request authentication from the client, such as the email address and password. If these credentials match an account on the mail server, the server will send the email to the intended recipient.
+
+Online multiplayer gaming also uses the client-server model. One example is Blizzard's Battle.net service, which hosts online games for World of Warcraft, StarCraft, Overwatch, and others. When players open a Blizzard application, the game client automatically connects to a Battle.net server. Once players log in to Battle.net, they can see who else is online, chat with other players, and play matches with or against other gamers.
+
+While Internet servers typically provide connections to multiple clients at a time, each physical machine can only handle so much traffic. Therefore, popular online services distribute clients across multiple physical servers, using a technique called distributed computing. In most cases, it does not matter which specific machine users are connected to, since the servers all provide the same service.
+
+</br>
+<b>NOTE:</b>
+</br>
+ The client-server model may be contrasted to the P2P model, in which clients connect directly to each other. In a P2P connection, there is no central server required, since each machine acts as both a client and a server</p>
+</p>
+<a name="COMPONENTS OF WEB APPLICATION"></a>
+<h4 style="font-size:100%">COMPONENTS OF WEB APPLICATION</h4>
+<p class="sample">
+ Any web application, big or small, contains these major components:
+<ul type="square">
+<li><b>View Layer:</b>- When you consider an MVC application, the View layer component gives an interface to the application. Regardless if it is for users with a browser or for another application using Web services. View layer is the bridge for getting the data in and out of the application.
+It does not have business logic, like calculating interest for a banking application or storing items in a shopping cart for an online catalog. It also does not contain any code for existing data to or retrieving data from a data source. Business logic is managed by the Model layer. View layer is more focused on the interface.</li>
+
+<li><b>Business Layer:</b>- It is also known as Business Logic or Domain Logic or Application Layer. The function of the business layer is to accept user requests from the browser, processes them, and determine the routes through which the data will be accessed. The workflows by which the data and requests travel through the back end lay encoded in a business layer.</li>
+
+<li><b>Data Access Layer:</b>- This layer is built to keep the code you use to pull data from your data store like database, flat files, or web services separate from business logic and presentation code. So even if you have to change data stores, you don’t end up rewriting the whole thing.
+
+There are many ORM frameworks that are blending the DAL with other layers which makes development easy during web application development services.</li>
+
+<li><b>Error handling, security, logging:</b>- When you build a web application, people generally tend to focus on the end-goal, building and testing only for situations when things go right. Alas! things rarely go right all the time in the real world.
+
+This is where error handling is a vital part of any application’s user experience. And, if it is done well, it can leave your users feeling informed and properly considered.</li>
+</ul>
+</p>
+<a name="TYPES OF WEB APPLICATION"></a>
+<h4 style="font-size:100%">TYPES OF WEB APPLICATION</h4>
+<p class="sample">
+In simple terms, a web application architecture or a type of web application is a pattern of interaction between various web application components that we discussed above. The “type” of web application architecture is directly proportional to how the application logic is distributed among the client and server sides.
+</br>
+Three primary types of web application architecture are:
+<ul type="square">
+<li><b>Serverless Architecture —</b> A serverless architecture is a simple way to build and run applications and services without having to manage infrastructure. The application you deploy runs on servers, but all the server management is done by a third-party service provider like AWS. You don’t need to provision, scale, and maintain servers in order to run your applications, databases, and storage systems.</li>
+<li><b>Single-Page Applications — </b>A single-page application or SPA is a type of web application architecture which interacts with the user by dynamically rewriting the current page rather than loading entire new pages from a server. By this way, one can avoid interruption of the user experience between successive pages which makes the application behave more like a desktop application.
+All the vital code of HTML, JavaScript, and CSS is retrieved with a single page load, or the appropriate resources are dynamically loaded and added to the page as necessary.</li>
+<li><b>Microservices — </b>They can be called small and lightweight services which are responsible for executing a single functionality. The Microservices Architecture framework allows the developers working with it to not only enhance productivity but also speed up the entire deployment process.</li>
+</ul>
+</p>
+<a name="OVERVIEW OF HTTP REQUEST-RESPONSE"></a>
+<h5 style="font-size:100%">OVERVIEW OF HTTP REQUEST-RESPONSE</h5>
+<center>
+<img src="http.jpg" alt="http" width="500" height"333">
+</center>
+<p class="sample">
+The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems. This is the foundation for data communication for the World Wide Web (i.e. internet) since 1990. HTTP is a generic and stateless protocol which can be used for other purposes as well using extensions of its request methods, error codes, and headers.
+</br>
+Basically, HTTP is a TCP/IP based communication protocol, that is used to deliver data (HTML files, image files, query results, etc.) on the World Wide Web. The default port is TCP 80, but other ports can be used as well. It provides a standardized way for computers to communicate with each other. HTTP specification specifies how clients' request data will be constructed and sent to the server, and how the servers respond to these requests.
+<br></br>
+<b>Basic Features</b>
+<br></br>
+There are three basic features that make HTTP a simple but powerful protocol:
+<ul type="square">
+<li><b>HTTP is connectionless:</b> The HTTP client, i.e., a browser initiates an HTTP request and after a request is made, the client waits for the response. The server processes the request and sends a response back after which client disconnect the connection. So client and server knows about each other during current request and response only. Further requests are made on new connection like client and server are new to each other.</li>
+<li><b>HTTP is media independent:</b> It means, any type of data can be sent by HTTP as long as both the client and the server know how to handle the data content. It is required for the client as well as the server to specify the content type using appropriate MIME-type.</li>
+<li><b>HTTP is stateless:</b>As mentioned above, HTTP is connectionless and it is a direct result of HTTP being a stateless protocol. The server and client are aware of each other only during a current request. Afterwards, both of them forget about each other. Due to this nature of the protocol, neither the client nor the browser can retain information between different requests across the web pages.</li>
+</ul>
+</p>
+<a name="GENERATION OF DYNAMIC WEBPAGE"></a>
+<h6 style="font-size:100%">GENERATION OF DYNAMIC WEBPAGE</h6>
+<p class="sample">
+Web development has progressed through several major paradigm shifts during the 23 years since 1995 when the necessary tools and techniques for dynamically produced first started becoming relevant.  Prior to 1995, most web pages were simple “static” HTML pages.  We can categorize four main periods in the  development of dynamic web page generation.
+</br>
+<ul type="square">
+<li><b>First Generation: </b> Full HTML Page Generation (1993-1998).  In the first generation, web pages could be generated dynamically, but they were not fully interactive.  The key technologies that dominated dynamic page generation during this period were Common Gateway Interface (CGI), Perl, and PHP.  It was essentially like writing each piece of HTML for a page individually with the “C” programming language.  It worked quite effectively, but was not very flexible.</li>
+<li><b>Second Generation:</b>  Interactive Pages (1998-2010).  In this lengthy second generation, web pages became truly interactive.  The key technologies that dominated this period were Java Servlets and Microsoft’s Active Server Pages (ASP), which Microsoft replaced with ASP.NET in 2002.  For developers, this was essentially like writing a user interface program for Microsoft Windows or Unix XWindows.  This worked very effectively, but leveraged software development conventions from the previous generation of graphical user interface (GUI) development.  Most developers working with these technologies did not actually know how to create HTML pages with JavaScript – the tools hid those details.</li>
+
+<li><b>Third Generation:</b>  Natural Pages with MVC (2010-2016).  The third generation of dynamic page development allowed for web pages to be much more compact and thus served to browsers a lot faster than second generation pages.  It also encouraged developers to know more about web specifics such as HTML, CSS, and JavaScript.  The main limitation with the second generation technology was that although it was easy to use, the web pages included a lot of extra HTML to facilitate the easier development.  That increased the size of the web pages dramatically and caused performance problems.  The introduction of the so-called Model-View-Controller (MVC) design patterns with ASP.NET MVC and similar technologies addressed that concern.  The switch from second to third generation technology was gradual if only because the advantages to end users in this case were incremental.  This was a major change for developers, though.</li>
+
+<li><b>Fourth Generation: </b> Web 2.0 (2016-Present).  The latest change in dynamic web page generation probably seems the most significant to both end users and developers.  The change was relatively sudden compared to previous changes.  The latest change was strictly for browser-based development.  The changes allowed for web pages that were as full-featured and as fast as typical user interface applications for Windows.  In fact, over a short period of time, users have come to expect such “rich” web applications as the standard.  The key enabler for such rich applications was the introduction of new standards and technologies layered on top of traditional JavaScript that added “type safety” to JavaScript, thus allowing more complex code to be written in a reliable fashion.  The demand for these new technologies required major changes in developer skill sets – specifically, developers using these technologies have to fully understand HTML, CSS, and JavaScript. The key technologies dominating the current period are Google’s Angular and Facebook’s React.js. </li>
+</ul>
+</p>
+<a name="APPLICATION SERVER"></a>
+<h7 style="font-size:100%"><b>APPLICATION SERVER</b></h7>
+<p class="sample">
+An application server is a server that is designed for or dedicated to running specific applications. At its most basic, it might be used to run one application. If that application is the one that keeps a company network going and is, therefore, a massive application, it might take up the entire RAM and ROM requirement of one server.
+</br>
+Another possibility is that a server is used to run certain kinds of applications. For example, a company might have several word processing, spreadsheet, or desktop publishing programs, and all of those applications might reside on one type of server. Everyone who needs to access those programs would then log on to the Desktop Publishing Server, for example, to use whatever design program that the company might recommend and have on hand.
+</br>
+Another kind of application server is one that runs an operating system. This is more old-fashioned, but it is still used. Certain computers, more commonly called terminals, connect to a server in order to access basic functions.
+</br>
+Like ants and bees that have specific roles in life, application servers have specific parts to play in the overall anthill or beehive of a company. As with many things computer-related, there is a more complicated example. Oracle, one of the main server developers, has come out with a <i><b>J2EE</b></i> (Java Platform Enterprise Edition) server. A huge number of companies worldwide use the J2EE server, which is able to run very powerful applications that can be accessed by multiple computers connected to that server on a network.
+</br>
+
+ 
+What it all boils down to, though, is the computer world's propensity to designate certain resources to perform certain actions. In the same way that someone might use a word processing program to write a paper but a photo manipulation program to touch up vacation photos, tech departments use application servers to compartmentalize the way that a company's multiple computers do certain things. If they're doing their job well, most people will hardly be aware that such activity is going on.
+<br></br>
+</p>
+<a name="WEB SECURITY"></a>
+<h8 style="font-size:100%"><b>WEB SECURITY</b></h8>
+<br></br>
+<p class="sample">
+Web security is also known as “Cybersecurity”. It basically means protecting a website or web application by detecting, preventing and responding to cyber threats.
+</br>
+Websites and web applications are just as prone to security breaches as physical homes, stores, and government locations. Unfortunately, cybercrime happens every day, and great web security measures are needed to protect websites and web applications from becoming compromised.
+
+That’s exactly what web security does – it is a system of protection measures and protocols that can protect your website or web application from being hacked or entered by unauthorized personnel. This integral division of Information Security is vital to the protection of websites, web applications, and web services. Anything that is applied over the Internet should have some form of web security to protect it.
+<br></br>
+<b>Details of Web Security</b>
+<br></br>
+There are a lot of factors that go into web security and web protection. Any website or application that is secure is surely backed by different types of checkpoints and techniques for keeping it safe.
+</br>
+There are a variety of security standards that must be followed at all times, and these standards are implemented and highlighted by the OWASP. Most experienced web developers from top cybersecurity companies will follow the standards of the OWASP as well as keep a close eye on the Web Hacking Incident Database to see when, how, and why different people are hacking different websites and services.
+</br>
+Essential steps in protecting web apps from attacks include applying up-to-date encryption, setting proper authentication, continuously patching discovered vulnerabilities, avoiding data theft by having secure software development practices. The reality is that clever attackers may be competent enough to find flaws even in a fairly robust secured environment, and so a holistic security strategy is advised.
+<br></br>
+<b>Available Technology</b>
+<br></br>
+There are different types of technologies available for maintaining the best security standards. Some popular technical solutions for testing, building, and preventing threats include:
+<ul type="square">
+<li>Black box testing tools</li>
+<li>Fuzzing tools</li>
+<li>White box testing tools</li>
+<li>Web application firewalls (WAF)</li>
+<li>Security or vulnerability scanners</li>
+<li>Password cracking tools</li>
+</ul>
+</p>
+<p class="sample">
+<b>Likelihood of Threat</b>
+<br></br>
+Your website or web application’s security depends on the level of protection tools that have been equipped and tested on it. There are a few major threats to security which are the most common ways in which a website or web application becomes hacked. Some of the top vulnerabilities for all web-based services include:
+<ul type="square">
+<li>SQL injection</li>
+<li>Password breach</li>
+<li>Cross-site scripting</li>
+<li>Data breach</li>
+<li>Remote file inclusion</li>
+<li>Code injection</li>
+</ul>
+</p>
+<p class="sample">
+<b>The Best Strategies</b>
+</br>
+There are two big defense strategies that a developer can use to protect their website or web application. The two main methods are as follows:
+<ul type="square">
+<li><b>Resource assignment – </b>By assigning all necessary resources to causes that are dedicated to alerting the developer about new web security issues and threats, the developer can receive a constant and updated alert system that will help them detect and eradicate any threats before security is officially breached.</li>
+<li><b>Web scanning – </b>There are several web scanning solutions already in existence that are available for purchase or download. These solutions, however, are only good for known vulnerability threats – seeking unknown threats can be much more complicated. This method can protect against many breaches, however, and is proven to keep websites safe in the long run.</li>
+</ul>
+</p>
+<p class="sample">
+Web Security also protects the visitors from the below-mentioned points: 
+<ul type="square">
+<li><b>Stolen Data: </b>Cyber-criminals frequently hacks visitor’s data that is stored on a website like email addresses, payment information, and a few other details.</li>
+<li><b>Phishing schemes:</b> This is not just related to email, but through phishing, hackers design a layout that looks exactly like the website to trick the user by compelling them to give their sensitive details. </li>
+<li><b>Session hijacking:</b> Certain cyber attackers can take over a user’s session and compel them to take undesired actions on a site.
+<li><b>Malicious redirects:</b> Sometimes the attacks can redirect visitors from the site they visited to a malicious website.
+<li><b>SEO Spam:</b> Unusual links, pages, and comments can be displayed on a site by the hackers to distract your visitors and drive traffic to malicious websites.
+</ul>
+</p>
+<p class="sample">
+Thus, web security is easy to install and it also helps the business people to make their website safe and secure. A web application firewall prevents automated attacks that usually target small or lesser-known websites. These attacks are born out by malicious bots or malware that automatically scan for vulnerabilities they can misuse, or cause DDoS attacks that slow down or crash your website.
+</br>
+Thus, Web security is extremely important, especially for websites or web applications that deal with confidential, private, or protected information. Security methods are evolving to match the different types of vulnerabilities that come into existence.
+ </p>
+</body>
+</html>
