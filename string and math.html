@@ -1,0 +1,83 @@
+<html>
+<head>
+<metaname="viewreport" content="width=device-width,initial-scale=1">
+<title>Function</title>
+</head>
+<style>
+body{
+     background-color:#848482;
+     
+} 
+table.center{
+  margin:auto;
+}
+   
+table, td{
+  border:  solid black;
+  font-style:italic;
+  text-align:center;
+  font-size:20px;
+  width:50%;
+}
+.selector{
+  padding:.10em;
+  background-color:white;
+  color:black;
+ color: white;
+ }
+</style>
+<script>
+
+ function Function_123() {
+
+  var a=document.getElementById('input').value;
+  var len=a.length;
+  var pos=a.search;
+  var pos_s=a.slice(slice_f,slice_w);
+  var pos_r=a.replace(replace_w,replace);
+  document.write(length of the string="+len+"","searched string="+pos+"","sliced string="+pos_s+"","replaced string="+pos_r+");
+}
+
+function function_abc(){
+   
+            var b=parseInt(document.getElementById('input_n').value);
+            var r=Math.round(b);
+            var s=Math.sqrt(b);
+            var ab=Math.abs(b);
+            var ce=Math.ceil(b);
+            var f=Math.floor(b);
+            var c=document.getElementById('input_p').value;
+            var p=Math.pow(b,c);
+             document.write(Round of value"+r+"","Square value"+s+"","absolute value"+ab+"Ceil value"+ce+"","Floor value"+f+"","Power value"+p+");
+}
+
+</script>
+<h1><center>FUNCTION</center></h1>
+<h2><center>STRING</center></h2>
+<center>
+<body>
+<form>
+<table id="mytable"class="center">
+<tr><th>Enter a text</th><td colspan="2"><input type="text" id="input" name="input"></input></td></tr>
+<tr><th>Search an element in a text</th><td colspan="2"><input type="text" id="search" name="search"></input></td></tr>
+ <tr><th style="colspan=3" rowspan="3"> Slice</br></th></tr>
+  <th>1.starts from</th><td><input type="text" id="slice_f" name="slice_f"></input></td></tr>
+  <th> 2.ends with</th><td><input type="text" id="slice_w" name="slice_w"></input></td></tr>
+ <tr> <th style="colspan=3"rowspan="3">Replace</br></th>
+  <th>1.which word</th><td><input type="text" id="replace_w" name="replace_w"></input></td></tr>
+ <th> 2.with which word</th><td><input type="text" id="replace" name="replace"></input></td></tr>
+</table>
+</br>
+<input type="button" value="Evaluate" style=background-color:#5C5858 onclick="Function_123()" class="selector"/>
+<h3>MATH</h3>
+<table class="center">
+<tr><td>Enter a number</td><td><input type="text" id="input_n" name="input_n"></input></td></tr>
+<tr><td>Power to be assigned</td><td><input type="text" id="input_p" name="input_p"></input></td></tr>
+</table>
+<input type="button" value="Evaluate" style=background-color:#5C5858 onclick="function_abc()" class="selector"/>
+
+</form>
+</body>
+</center>
+</html>
+
