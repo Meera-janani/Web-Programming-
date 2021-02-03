@@ -1,0 +1,20 @@
+<html>
+<head>
+<body id='body'>
+    <center>
+    <h1>BG-COLOR</h1>
+    <div>
+    <input type="button" id="butt" value="color change">
+    </div>
+    <!--<input id="butt" style="height:50px; width:150px;" type="button" value=" color change " onclick="colorchange()">-->
+   
+    <center>
+    <script>
+        document.getElementById("butt").addEventListener("click", colorchange);
+        function colorchange() {
+            var color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.background = color;
+        }
+</script>
+    
+</html>
