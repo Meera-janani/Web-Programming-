@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>dynamic image</title>
+<style>
+   .center {
+       margin: auto;
+       width: 50%;
+       padding: 10px;
+     }
+    .image {
+        width: 130px;
+        height: 195px;
+        background:no-repeat;
+        margin: 50px;
+    }
+   #text1,#text2{
+            text-align: center;
+            display:block;
+        }
+        #text2{
+            display: none;
+        }
+    
+</style>
+</head>
+<body class="center">
+    <div class="content" id="content">
+      <div class="image" id="image">
+        <img src="smile1.jpg" id="smile">
+      <div class="text" id="text">
+        <h1 id="text1">Catch Me If You Can.....!! </h1>
+        <h1 id="text2">haha.....!!</h1>
+    </div>
+  <div>  
+</div>
+<script>
+     document.getElementById("content").addEventListener("mouseover",change1);
+    document.getElementById("content").addEventListener("mouseout",change2);
+    function change1(){
+        document.getElementById('smile').src = "smile1.jpg";
+        document.getElementById('text1').style.display="none";
+        document.getElementById('text2').style.display="block";
+    }
+    function change2(){
+        document.getElementById('smile').src = "smile2.jpg";
+        document.getElementById('text1').style.display="block";
+        document.getElementById('text2').style.display="none";
+    }
+</script>
+</body>
+</html>
+
